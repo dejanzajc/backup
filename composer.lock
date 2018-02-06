@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "be7624255f500013b2d09bd4d0f8da48",
+    "content-hash": "bc274536115b9b82dd89839e05c1b12c",
     "packages": [
         {
             "name": "braintree/braintree_php",
@@ -6064,6 +6064,122 @@
             "time": "2017-06-21T14:56:23+00:00"
         },
         {
+            "name": "mageplaza/magento-2-french-language-pack",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mageplaza/magento-2-french-language-pack.git",
+                "reference": "cdbdcbe7c9542806ae092d15a29302e951d38c63"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mageplaza/magento-2-french-language-pack/zipball/cdbdcbe7c9542806ae092d15a29302e951d38c63",
+                "reference": "cdbdcbe7c9542806ae092d15a29302e951d38c63",
+                "shasum": ""
+            },
+            "require": {
+                "mageplaza/module-core": "^1.3.1|dev-master"
+            },
+            "type": "magento2-language",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mageplaza team",
+                    "email": "hi@mageplaza.com",
+                    "homepage": "https://www.mageplaza.com",
+                    "role": "Leader"
+                }
+            ],
+            "description": "French language package for Magento 2",
+            "homepage": "https://www.mageplaza.com",
+            "time": "2017-08-24T04:35:27+00:00"
+        },
+        {
+            "name": "mageplaza/magento-2-italian-language-pack",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mageplaza/magento-2-italian-language-pack.git",
+                "reference": "19225950e4a6698e5bc41cebd00b1d677b3aad07"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mageplaza/magento-2-italian-language-pack/zipball/19225950e4a6698e5bc41cebd00b1d677b3aad07",
+                "reference": "19225950e4a6698e5bc41cebd00b1d677b3aad07",
+                "shasum": ""
+            },
+            "require": {
+                "mageplaza/module-core": "^1.3.1|dev-master"
+            },
+            "type": "magento2-language",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mageplaza team",
+                    "email": "hi@mageplaza.com",
+                    "homepage": "https://www.mageplaza.com",
+                    "role": "Leader"
+                }
+            ],
+            "description": "Italian language package for Magento 2",
+            "homepage": "https://www.mageplaza.com",
+            "time": "2017-08-24T04:36:05+00:00"
+        },
+        {
+            "name": "mageplaza/module-core",
+            "version": "1.3.9",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mageplaza/module-core.git",
+                "reference": "48e53e0419b1d2766ebcd03fd2b2d9b521a7b942"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mageplaza/module-core/zipball/48e53e0419b1d2766ebcd03fd2b2d9b521a7b942",
+                "reference": "48e53e0419b1d2766ebcd03fd2b2d9b521a7b942",
+                "shasum": ""
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Mageplaza\\Core\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Mageplaza",
+                    "email": "hi@mageplaza.com",
+                    "homepage": "https://www.mageplaza.com",
+                    "role": "Leader"
+                }
+            ],
+            "description": "Mageplaza Core for Magento 2",
+            "time": "2018-02-01T10:16:11+00:00"
+        },
+        {
             "name": "monolog/monolog",
             "version": "1.23.0",
             "source": {
@@ -6849,6 +6965,36 @@
             "description": "An extendable framework for version control hooks.",
             "abandoned": "phpro/grumphp",
             "time": "2014-09-22T08:40:36+00:00"
+        },
+        {
+            "name": "splendidinternet/mage2-locale-de-de",
+            "version": "1.39.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/splendidinternet/Magento2_German_LocalePack_de_DE.git",
+                "reference": "d31e961137e82425f504e7357cccf9427a279241"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/splendidinternet/Magento2_German_LocalePack_de_DE/zipball/d31e961137e82425f504e7357cccf9427a279241",
+                "reference": "d31e961137e82425f504e7357cccf9427a279241",
+                "shasum": ""
+            },
+            "require": {
+                "magento/framework": "^100.0.0 || ^101.0.0"
+            },
+            "type": "magento2-language",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0"
+            ],
+            "description": "German (Germany) language",
+            "time": "2018-01-29T12:15:10+00:00"
         },
         {
             "name": "symfony/console",
@@ -11667,6 +11813,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "composer/composer": 15,
+        "mageplaza/magento-2-italian-language-pack": 20,
+        "mageplaza/magento-2-french-language-pack": 20,
         "phpmd/phpmd": 0
     },
     "prefer-stable": false,
