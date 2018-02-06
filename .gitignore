@@ -1,0 +1,15 @@
+.data
+.php_cs
+.idea
+/app/etc
+/app/.htaccess
+/app/*.php
+/bin
+/dev
+/generated
+/lib
+/pub
+/setup
+/var
+/vendor
+/index.php
