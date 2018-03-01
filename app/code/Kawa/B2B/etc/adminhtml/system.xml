@@ -1,0 +1,35 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="Kawa" translate="label" sortOrder="9999999">
+            <label>Kawa</label>
+        </tab>
+        <section id="B2B" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>B2B</label>
+            <tab>Kawa</tab>
+            <resource>Kawa_B2B::configuration</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Configuration</label>
+                <field id="is_b2b_shop" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Is B2B Shop:</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="allowed_pages" translate="label comment" type="textarea" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Allowed pages:</label>
+                    <source_model>Mageplaza\Core\Model\Config\Source\NoticeType</source_model>
+                    <comment>Pages must be separated with new line.</comment>
+                    <depends>
+                        <field id="is_b2b_shop">1</field>
+                    </depends>
+                </field>
+                <field id="redirect_to" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Redirect to:</label>
+                    <source_model>Mageplaza\Core\Model\Config\Source\NoticeType</source_model>
+                    <comment>Write path without the domain name.</comment>
+                    <depends>
+                        <field id="is_b2b_shop">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
