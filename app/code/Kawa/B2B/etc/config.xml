@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <b2b>
+            <general>
+                <allowed_pages>customer/account/*</allowed_pages>
+                <redirect_to>customer/account/login</redirect_to>
+            </general>
+        </b2b>
+    </default>
+</config>

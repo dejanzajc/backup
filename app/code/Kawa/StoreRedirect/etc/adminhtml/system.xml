@@ -10,7 +10,7 @@
                     <label>Store redirect:</label>
                     <frontend_model>Kawa\StoreRedirect\Block\Adminhtml\Form\Field\Navigation</frontend_model>
                     <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
-                    <comment>Language and Region are not case-sensitive.</comment>
+                    <comment>Language and Region are case-insensitive.</comment>
                 </field>
             </group>
         </section>

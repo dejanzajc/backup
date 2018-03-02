@@ -5,19 +5,10 @@ namespace Kawa\StoreRedirect\Block\Adminhtml\Form\Field;
 class Storecode extends \Magento\Framework\View\Element\Html\Select
 {
     /**
-     * Store Manager Model
-     *
      * @var \Magento\Store\Model\StoreManagerInterface
      */
     protected $storeManager;
 
-    /**
-     * Activation constructor.
-     *
-     * @param \Magento\Framework\View\Element\Context $context
-     * @param \Magento\Store\Model\StoreManagerInterface $storeManager
-     * @param array $data
-     */
     public function __construct(
         \Magento\Framework\View\Element\Context $context,
         \Magento\Store\Model\StoreManagerInterface $storeManager,
@@ -37,16 +28,12 @@ class Storecode extends \Magento\Framework\View\Element\Html\Select
     }
 
     /**
-     * Parse to html.
-     *
-     * @return mixed
+     * {@inheritdoc}
      */
     public function _toHtml()
     {
         if (!$this->getOptions()) {
-            $attributes = $this->getWebsitesList();
-
-            foreach ($attributes as $attribute) {
+            foreach ($this->getStoresList() as $attribute) {
                 $this->addOption($attribute['value'], $attribute['label']);
             }
         }
@@ -54,17 +41,22 @@ class Storecode extends \Magento\Framework\View\Element\Html\Select
         return parent::_toHtml();
     }
 
-    public function getWebsitesList()
+    /**
+     * @return array
+     * @throws \Magento\Framework\Exception\LocalizedException
+     */
+    public function getStoresList()
     {
-        $out = [];
+        $stores = [];
         foreach ($this->storeManager->getStores($withDefault = false) as $store) {
             $storeGroup   = $this->storeManager->getGroup($store->getStoreGroupId());
             $storeWebsite = $this->storeManager->getWebsite($store->getWebsiteId());
-            $out[]        = [
+            $stores[]     = [
                 'value' => $store->getId(),
-                'label' => $storeWebsite->getName() . '/' . substr($storeGroup->getName(), 0, -6) . '/' . $store->getName(),
+                'label' => $storeWebsite->getName() . '/' . $storeGroup->getName() . '/' . $store->getName(),
             ];
         }
-        return $out;
+
+        return $stores;
     }
 }

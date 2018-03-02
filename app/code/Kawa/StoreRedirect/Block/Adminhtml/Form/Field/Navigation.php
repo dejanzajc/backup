@@ -5,32 +5,31 @@ namespace Kawa\StoreRedirect\Block\Adminhtml\Form\Field;
 class Navigation extends \Magento\Config\Block\System\Config\Form\Field\FieldArray\AbstractFieldArray
 {
     /**
-     * @var $_attributesRenderer \Kawa\StoreRedirect\Block\Adminhtml\Form\Field\Storecode
+     * @var \Kawa\StoreRedirect\Block\Adminhtml\Form\Field\Storecode
      */
-    protected $activation;
+    protected $storecodeRenderer;
 
     /**
-     * Get activation options.
+     * Get storecode renderer.
      *
      * @return \Kawa\StoreRedirect\Block\Adminhtml\Form\Field\Storecode
+     * @throws \Magento\Framework\Exception\LocalizedException
      */
     protected function getStorecodeRenderer()
     {
-        if (!$this->activation) {
-            $this->activation = $this->getLayout()->createBlock(
-                '\Kawa\StoreRedirect\Block\Adminhtml\Form\Field\Storecode',
+        if (!$this->storecodeRenderer) {
+            $this->storecodeRenderer = $this->getLayout()->createBlock(
+                \Kawa\StoreRedirect\Block\Adminhtml\Form\Field\Storecode::class,
                 '',
                 ['data' => ['is_render_to_js_template' => true]]
             );
         }
 
-        return $this->activation;
+        return $this->storecodeRenderer;
     }
 
     /**
      * Prepare to render.
-     *
-     * @return void
      */
     protected function _prepareToRender()
     {
@@ -40,11 +39,11 @@ class Navigation extends \Magento\Config\Block\System\Config\Form\Field\FieldArr
             'storecode',
             [
                 'label'    => __('Redirect to storecode'),
-                'renderer' => $this->getStorecodeRenderer()
+                'renderer' => $this->getStorecodeRenderer(),
             ]
         );
 
-        $this->_addAfter = false;
+        $this->_addAfter       = false;
         $this->_addButtonLabel = __('Add');
     }
 
@@ -52,15 +51,15 @@ class Navigation extends \Magento\Config\Block\System\Config\Form\Field\FieldArr
      * Prepare existing row data object.
      *
      * @param \Magento\Framework\DataObject $row
-     * @return void
+     * @throws \Magento\Framework\Exception\LocalizedException
      */
     protected function _prepareArrayRow(\Magento\Framework\DataObject $row)
     {
-        $options = [];
+        $options         = [];
         $customAttribute = $row->getData('storecode');
+        $key             = 'option_' . $this->getStorecodeRenderer()->calcOptionHash($customAttribute);
+        $options[$key]   = 'selected="selected"';
 
-        $key = 'option_' . $this->getStorecodeRenderer()->calcOptionHash($customAttribute);
-        $options[$key] = 'selected="selected"';
         $row->setData('option_extra_attrs', $options);
     }
 }
