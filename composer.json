@@ -1,96 +1,101 @@
 {
-    "name": "kawa/dogslove",
-    "description": "Dogslove Online Shop, Magento2",
-    "type": "project",
-    "version": "1.0.0",
-    "license": [
-        "OSL-3.0",
-        "AFL-3.0"
+  "name": "kawa/dogslove",
+  "description": "Dogslove Online Shop, Magento2",
+  "type": "project",
+  "version": "1.0.0",
+  "license": [
+    "OSL-3.0",
+    "AFL-3.0"
+  ],
+  "require": {
+    "magento/product-community-edition": "2.2.2",
+    "composer/composer": "@alpha",
+    "magento/data-migration-tool": "2.2.2",
+    "splendidinternet/mage2-locale-de-de": "^1.39",
+    "mageplaza/magento-2-italian-language-pack": "dev-master",
+    "mageplaza/magento-2-french-language-pack": "dev-master",
+    "firegento/magesetup2": "dev-develop#01d0e8230890fe63d580f5cab33d3521425d999b"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~6.2.0",
+    "squizlabs/php_codesniffer": "3.0.1",
+    "phpmd/phpmd": "@stable",
+    "pdepend/pdepend": "2.5.0",
+    "friendsofphp/php-cs-fixer": "~2.1.1",
+    "lusitanian/oauth": "~0.8.10",
+    "sebastian/phpcpd": "2.0.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Magento\\Framework\\": "lib/internal/Magento/Framework/",
+      "Magento\\Setup\\": "setup/src/Magento/Setup/",
+      "Magento\\": "app/code/Magento/"
+    },
+    "psr-0": {
+      "": [
+        "app/code/"
+      ]
+    },
+    "files": [
+      "app/etc/NonComposerComponentRegistration.php"
     ],
-    "require": {
-        "magento/product-community-edition": "2.2.2",
-        "composer/composer": "@alpha",
-        "magento/data-migration-tool": "2.2.2",
-        "splendidinternet/mage2-locale-de-de": "^1.39",
-        "mageplaza/magento-2-italian-language-pack": "dev-master",
-        "mageplaza/magento-2-french-language-pack": "dev-master"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "~6.2.0",
-        "squizlabs/php_codesniffer": "3.0.1",
-        "phpmd/phpmd": "@stable",
-        "pdepend/pdepend": "2.5.0",
-        "friendsofphp/php-cs-fixer": "~2.1.1",
-        "lusitanian/oauth": "~0.8.10",
-        "sebastian/phpcpd": "2.0.4"
-    },
-    "autoload": {
-        "psr-4": {
-            "Magento\\Framework\\": "lib/internal/Magento/Framework/",
-            "Magento\\Setup\\": "setup/src/Magento/Setup/",
-            "Magento\\": "app/code/Magento/"
-        },
-        "psr-0": {
-            "": [
-                "app/code/"
-            ]
-        },
-        "files": [
-            "app/etc/NonComposerComponentRegistration.php"
-        ],
-        "exclude-from-classmap": [
-            "**/dev/**",
-            "**/update/**",
-            "**/Test/**"
-        ]
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Magento\\Sniffs\\": "dev/tests/static/framework/Magento/Sniffs/",
-            "Magento\\Tools\\": "dev/tools/Magento/Tools/",
-            "Magento\\Tools\\Sanity\\": "dev/build/publication/sanity/Magento/Tools/Sanity/",
-            "Magento\\TestFramework\\Inspection\\": "dev/tests/static/framework/Magento/TestFramework/Inspection/",
-            "Magento\\TestFramework\\Utility\\": "dev/tests/static/framework/Magento/TestFramework/Utility/"
-        }
-    },
-    "minimum-stability": "stable",
-    "repositories": {
-        "0": {
-            "type": "composer",
-            "url": "https://repo.magento.com/"
-        },
-        "data-migration-tool": {
-            "type": "git",
-            "url": "https://github.com/magento/data-migration-tool"
-        }
-    },
-    "extra": {
-        "magento-force": "override",
-        "magento-deploy-ignore": {
-            "magento/magento2-base": [
-                "/.htaccess",
-                "/.htaccess.sample",
-                "/.php_cs.dist",
-                "/.travis.yml",
-                "/.user.ini",
-                "/auth.json.sample",
-                "/grunt-config.json.sample",
-                "/app/design/adminhtml/Magento",
-                "/app/design/frontend/Magento",
-                "/CHANGELOG.md",
-                "/CONTRIBUTING.md",
-                "/CONTRIBUTOR_LICENSE_AGREEMENT.html",
-                "/COPYING.txt",
-                "/ISSUE_TEMPLATE.md",
-                "/LICENSE.txt",
-                "/LICENSE_AFL.txt",
-                "/Gruntfile.js.sample",
-                "/nginx.conf.sample",
-                "/package.json.sample",
-                "/php.ini.sample",
-                "/phpserver",
-                "/PULL_REQUEST_TEMPLATE.md"
-            ]
-        }
+    "exclude-from-classmap": [
+      "**/dev/**",
+      "**/update/**",
+      "**/Test/**"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Magento\\Sniffs\\": "dev/tests/static/framework/Magento/Sniffs/",
+      "Magento\\Tools\\": "dev/tools/Magento/Tools/",
+      "Magento\\Tools\\Sanity\\": "dev/build/publication/sanity/Magento/Tools/Sanity/",
+      "Magento\\TestFramework\\Inspection\\": "dev/tests/static/framework/Magento/TestFramework/Inspection/",
+      "Magento\\TestFramework\\Utility\\": "dev/tests/static/framework/Magento/TestFramework/Utility/"
     }
+  },
+  "minimum-stability": "stable",
+  "repositories": {
+    "0": {
+      "type": "composer",
+      "url": "https://repo.magento.com/"
+    },
+    "data-migration-tool": {
+      "type": "git",
+      "url": "https://github.com/magento/data-migration-tool"
+    },
+    "firegento_magesetup": {
+      "type": "vcs",
+      "url": "git@github.com:firegento/firegento-magesetup2.git"
+    }
+  },
+  "extra": {
+    "magento-force": "override",
+    "magento-deploy-ignore": {
+      "magento/magento2-base": [
+        "/.htaccess",
+        "/.htaccess.sample",
+        "/.php_cs.dist",
+        "/.travis.yml",
+        "/.user.ini",
+        "/auth.json.sample",
+        "/grunt-config.json.sample",
+        "/app/design/adminhtml/Magento",
+        "/app/design/frontend/Magento",
+        "/CHANGELOG.md",
+        "/CONTRIBUTING.md",
+        "/CONTRIBUTOR_LICENSE_AGREEMENT.html",
+        "/COPYING.txt",
+        "/ISSUE_TEMPLATE.md",
+        "/LICENSE.txt",
+        "/LICENSE_AFL.txt",
+        "/Gruntfile.js.sample",
+        "/nginx.conf.sample",
+        "/package.json.sample",
+        "/php.ini.sample",
+        "/phpserver",
+        "/PULL_REQUEST_TEMPLATE.md"
+      ]
+    }
+  }
 }
