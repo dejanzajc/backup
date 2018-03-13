@@ -14,7 +14,9 @@
     "splendidinternet/mage2-locale-de-de": "^1.39",
     "mageplaza/magento-2-italian-language-pack": "dev-master",
     "mageplaza/magento-2-french-language-pack": "dev-master",
-    "firegento/magesetup2": "dev-develop#01d0e8230890fe63d580f5cab33d3521425d999b"
+    "firegento/magesetup2": "dev-develop#01d0e8230890fe63d580f5cab33d3521425d999b",
+    "fooman/emailattachments-m2": "^2.1",
+    "enrico69/magento2-customer-activation": "1.3.2"
   },
   "require-dev": {
     "phpunit/phpunit": "~6.2.0",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9882f55b48dcd1eabd43bba9a8e861de",
+    "content-hash": "fe1a54a28ee40976a81f479a09be61e3",
     "packages": [
         {
             "name": "braintree/braintree_php",
@@ -559,6 +559,60 @@
             "description": "dotmailer integration for magento 2"
         },
         {
+            "name": "enrico69/magento2-customer-activation",
+            "version": "1.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/enrico69/magento2-customer-activation.git",
+                "reference": "45acf33a38e8bb0d2981b6f4a1df038c0e7ba52e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/enrico69/magento2-customer-activation/zipball/45acf33a38e8bb0d2981b6f4a1df038c0e7ba52e",
+                "reference": "45acf33a38e8bb0d2981b6f4a1df038c0e7ba52e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Enrico69\\Magento2CustomerActivation\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Eric COURTIAL",
+                    "email": "e.courtial30@gmail.com",
+                    "homepage": "https://github.com/enrico69",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Sebastian WAGNER",
+                    "email": "sebastian.wagner@tritum.de",
+                    "homepage": "https://github.com/sebastianwagner",
+                    "role": "Developer"
+                }
+            ],
+            "description": "This module is designed for Magento 2. It add the possibility for the site owner to manually validate customer accounts at registration.",
+            "keywords": [
+                "account",
+                "activation",
+                "customer",
+                "magento",
+                "magento2"
+            ],
+            "time": "2017-12-01T15:04:17+00:00"
+        },
+        {
             "name": "firegento/magesetup2",
             "version": "dev-develop",
             "source": {
@@ -601,7 +655,51 @@
                 "source": "https://github.com/firegento/firegento-magesetup2/tree/develop",
                 "issues": "https://github.com/firegento/firegento-magesetup2/issues"
             },
-            "time": "2018-01-29 09:19:50"
+            "time": "2018-01-29T09:19:50+00:00"
+        },
+        {
+            "name": "fooman/emailattachments-m2",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fooman/emailattachments-m2.git",
+                "reference": "b06ca77e8d2c111c1e9ad2e2426701b3fbd8b945"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fooman/emailattachments-m2/zipball/b06ca77e8d2c111c1e9ad2e2426701b3fbd8b945",
+                "reference": "b06ca77e8d2c111c1e9ad2e2426701b3fbd8b945",
+                "shasum": ""
+            },
+            "require": {
+                "magento/framework": "^100.0 | ^101.0.0",
+                "magento/module-backend": "^100.0.2",
+                "magento/module-checkout-agreements": "^100.0.2",
+                "magento/module-sales": "^100.0.2 | ^101.0.0",
+                "php": "~5.6.0|7.0.2|7.0.4|~7.0.6|~7.1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.2"
+            },
+            "suggest": {
+                "fooman/pdfcustomiser-m2": "Allows to easily customise the sales pdfs while also reducing file sizes ",
+                "fooman/printorderpdf-m2": "Allows attaching the order confirmation pdf to the order confirmation email"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "psr-4": {
+                    "Fooman\\EmailAttachments\\": "src/"
+                },
+                "files": [
+                    "src/registration.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0"
+            ],
+            "description": "Automatically attach pdf and terms and conditions documents to outgoing sales emails.",
+            "time": "2017-09-01T01:12:01+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -6114,12 +6212,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mageplaza/magento-2-french-language-pack.git",
-                "reference": "47134661ee79525eda74e8868c3f0c54ad64f4fa"
+                "reference": "5ae7dce2af4670853a9babef9c5643357c248fb0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mageplaza/magento-2-french-language-pack/zipball/47134661ee79525eda74e8868c3f0c54ad64f4fa",
-                "reference": "47134661ee79525eda74e8868c3f0c54ad64f4fa",
+                "url": "https://api.github.com/repos/mageplaza/magento-2-french-language-pack/zipball/5ae7dce2af4670853a9babef9c5643357c248fb0",
+                "reference": "5ae7dce2af4670853a9babef9c5643357c248fb0",
                 "shasum": ""
             },
             "require": {
@@ -6145,7 +6243,7 @@
             ],
             "description": "French language package for Magento 2",
             "homepage": "https://www.mageplaza.com",
-            "time": "2018-03-02 05:04:18"
+            "time": "2018-03-12T01:54:08+00:00"
         },
         {
             "name": "mageplaza/magento-2-italian-language-pack",
@@ -6153,12 +6251,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mageplaza/magento-2-italian-language-pack.git",
-                "reference": "68df7d8adf65e2f147b4b1a3964e8eda87d50279"
+                "reference": "660f8d79d7f44ee98aedcd16dd1489a8f8b93746"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mageplaza/magento-2-italian-language-pack/zipball/68df7d8adf65e2f147b4b1a3964e8eda87d50279",
-                "reference": "68df7d8adf65e2f147b4b1a3964e8eda87d50279",
+                "url": "https://api.github.com/repos/mageplaza/magento-2-italian-language-pack/zipball/660f8d79d7f44ee98aedcd16dd1489a8f8b93746",
+                "reference": "660f8d79d7f44ee98aedcd16dd1489a8f8b93746",
                 "shasum": ""
             },
             "require": {
@@ -6184,20 +6282,20 @@
             ],
             "description": "Italian language package for Magento 2",
             "homepage": "https://www.mageplaza.com",
-            "time": "2018-03-02 05:05:33"
+            "time": "2018-03-12T01:55:13+00:00"
         },
         {
             "name": "mageplaza/module-core",
-            "version": "1.3.9",
+            "version": "1.3.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mageplaza/module-core.git",
-                "reference": "48e53e0419b1d2766ebcd03fd2b2d9b521a7b942"
+                "reference": "040f456031e773a705d779498810c27e25b019d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mageplaza/module-core/zipball/48e53e0419b1d2766ebcd03fd2b2d9b521a7b942",
-                "reference": "48e53e0419b1d2766ebcd03fd2b2d9b521a7b942",
+                "url": "https://api.github.com/repos/mageplaza/module-core/zipball/040f456031e773a705d779498810c27e25b019d1",
+                "reference": "040f456031e773a705d779498810c27e25b019d1",
                 "shasum": ""
             },
             "type": "magento2-module",
@@ -6216,13 +6314,13 @@
             "authors": [
                 {
                     "name": "Mageplaza",
-                    "email": "hi@mageplaza.com",
+                    "email": "support@mageplaza.com",
                     "homepage": "https://www.mageplaza.com",
-                    "role": "Leader"
+                    "role": "Technical Support"
                 }
             ],
             "description": "Mageplaza Core for Magento 2",
-            "time": "2018-02-01T10:16:11+00:00"
+            "time": "2018-03-06T02:46:41+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -7043,7 +7141,7 @@
         },
         {
             "name": "symfony/console",
-            "version": "v2.8.35",
+            "version": "v2.8.36",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
@@ -7161,7 +7259,7 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v2.8.35",
+            "version": "v2.8.36",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
@@ -7221,7 +7319,7 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v3.4.5",
+            "version": "v3.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
@@ -7270,16 +7368,16 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v3.4.5",
+            "version": "v3.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "6a615613745cef820d807443f32076bb9f5d0a38"
+                "reference": "a479817ce0a9e4adfd7d39c6407c95d97c254625"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/6a615613745cef820d807443f32076bb9f5d0a38",
-                "reference": "6a615613745cef820d807443f32076bb9f5d0a38",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/a479817ce0a9e4adfd7d39c6407c95d97c254625",
+                "reference": "a479817ce0a9e4adfd7d39c6407c95d97c254625",
                 "shasum": ""
             },
             "require": {
@@ -7315,7 +7413,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2018-02-11T17:15:12+00:00"
+            "time": "2018-03-05T18:28:11+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -7378,7 +7476,7 @@
         },
         {
             "name": "symfony/process",
-            "version": "v2.8.35",
+            "version": "v2.8.36",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
@@ -9471,32 +9569,32 @@
     "packages-dev": [
         {
             "name": "doctrine/instantiator",
-            "version": "1.1.0",
+            "version": "1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/instantiator.git",
-                "reference": "185b8868aa9bf7159f5f953ed5afb2d7fcdc3bda"
+                "reference": "8e884e78f9f0eb1329e445619e04456e64d8051d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/185b8868aa9bf7159f5f953ed5afb2d7fcdc3bda",
-                "reference": "185b8868aa9bf7159f5f953ed5afb2d7fcdc3bda",
+                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/8e884e78f9f0eb1329e445619e04456e64d8051d",
+                "reference": "8e884e78f9f0eb1329e445619e04456e64d8051d",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1"
+                "php": ">=5.3,<8.0-DEV"
             },
             "require-dev": {
                 "athletic/athletic": "~0.1.8",
                 "ext-pdo": "*",
                 "ext-phar": "*",
-                "phpunit/phpunit": "^6.2.3",
-                "squizlabs/php_codesniffer": "^3.0.2"
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "~2.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.2.x-dev"
+                    "dev-master": "1.0.x-dev"
                 }
             },
             "autoload": {
@@ -9521,7 +9619,7 @@
                 "constructor",
                 "instantiate"
             ],
-            "time": "2017-07-22T11:58:36+00:00"
+            "time": "2015-06-14T21:17:01+00:00"
         },
         {
             "name": "friendsofphp/php-cs-fixer",
@@ -11264,7 +11362,7 @@
         },
         {
             "name": "symfony/config",
-            "version": "v3.4.5",
+            "version": "v3.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
@@ -11327,16 +11425,16 @@
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v3.4.5",
+            "version": "v3.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "752c45dc831dc42a472f0ab8ae0450b63b840656"
+                "reference": "12e901abc1cb0d637a0e5abe9923471361d96b07"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/752c45dc831dc42a472f0ab8ae0450b63b840656",
-                "reference": "752c45dc831dc42a472f0ab8ae0450b63b840656",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/12e901abc1cb0d637a0e5abe9923471361d96b07",
+                "reference": "12e901abc1cb0d637a0e5abe9923471361d96b07",
                 "shasum": ""
             },
             "require": {
@@ -11394,7 +11492,7 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2018-02-26T14:27:04+00:00"
+            "time": "2018-03-04T03:54:53+00:00"
         },
         {
             "name": "symfony/polyfill-php54",
@@ -11674,7 +11772,7 @@
         },
         {
             "name": "symfony/stopwatch",
-            "version": "v3.4.5",
+            "version": "v3.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/stopwatch.git",
